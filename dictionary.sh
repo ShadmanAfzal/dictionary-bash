@@ -1,15 +1,13 @@
 #!/bin/bash
 
 if [ $# -eq 0 ]; then
-    echo "Error: No arguments provided."
-    echo "Usage: $0 <arg1>"
+    echo -e "\033[1;31mError\033[0m: No arguments provided."
+    echo -e "\033[1;31mUsage\033[0m: $0 \033[1m<arg1>\033[0m"
     exit 1
 fi
 
 if [ ! "$(command -v jq)" ]; then
-  echo "Error: jq is not installed."
-  echo "Please install jq and try again."
-  echo "https://jqlang.github.io/jq/"
+  echo -e "\033[1;31mError\033[0m: jq is not installed."
   exit 1
 fi
 
